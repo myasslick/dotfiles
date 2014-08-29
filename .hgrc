@@ -1,0 +1,39 @@
+[ui]
+username = Yeuk Hon Wong <yeukhon@acm.org>
+
+[alias]
+diff-color = !hg diff --git --color=always | less -r
+diff-color-tip = !hg diff -c tip --git --color=always | less -r
+diff-color-qtip = !hg diff -c qtip --git --color=always | less -r
+pushtry = push -f -rtip try
+qlist = qseries -v
+latest = log --limit 5
+unpublic = phase --draft --force .
+
+[defaults]
+qnew = -Ue
+
+[extensions]
+record=
+mq =
+hgext.patchbomb =
+color =
+purge =
+
+[color]
+diff.trailingwhitespace = bold red_background
+diff.diffline = bold
+diff.hunk = magenta
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+
+[email]
+method = /usr/sbin/postfix
+from = Yeuk Hon Wong <yeukhon@acm.org?
+to = gokoproject@gmail.com
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8

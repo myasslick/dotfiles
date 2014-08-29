@@ -1,0 +1,7 @@
+[user]
+	name = Yeuk Hon Wong
+    email = yeukhon@acm.org
+[core]
+	editor = vim
+[color]
+	ui = auto

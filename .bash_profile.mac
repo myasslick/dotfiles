@@ -1,0 +1,7 @@
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias simpleserver='python -m SimpleHTTPServer'
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/gocourse
+export PATH=$PATH:$GOPATH/bin
+export GOROOT=/usr/local/go
+export PYTHONSTARTUP=~/.pythonrc
