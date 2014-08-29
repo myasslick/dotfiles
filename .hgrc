@@ -30,7 +30,7 @@ diff.changed = white
 
 [email]
 method = /usr/sbin/postfix
-from = Yeuk Hon Wong <yeukhon@acm.org?
+from = Yeuk Hon Wong <yeukhon@acm.org>
 to = gokoproject@gmail.com
 
 [diff]
