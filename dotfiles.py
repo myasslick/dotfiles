@@ -25,7 +25,7 @@ LINUX_FILES = [
     ".bash_aliases"
 ]
 
-URL = "https://github.com/yeukhon/dotfiles/blob/master/"
+URL = "https://raw.githubusercontent.com/yeukhon/dotfiles/master/"
 
 def file_maps(files):
     maps = {}
@@ -42,7 +42,7 @@ def file_maps(files):
 def download_files(files):
     for link, fpath in files.items():
         print("Downloading {}".format(link.split("/")[-1]))
-        local_path, headers = urlretrieve(link, filename=fpath, reporthook=f)
+        local_path, headers = urlretrieve(link, filename=fpath)
 
 def retrieve(is_mac=False, is_linux=False):
     if is_mac:
