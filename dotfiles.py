@@ -29,8 +29,7 @@ URL = "https://github.com/yeukhon/dotfiles/blob/master/"
 
 def file_maps(files):
     maps = {}
-    #home_dir = os.path.expanduser("~")
-    home_dir = "/tmp/folder"
+    home_dir = os.path.expanduser("~")
     for f in files:
         if isinstance(f, tuple):
             _url = URL + f[0]
