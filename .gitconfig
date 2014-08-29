@@ -1,7 +1,7 @@
 [user]
-	name = Yeuk Hon Wong
+    name = Yeuk Hon Wong
     email = yeukhon@acm.org
 [core]
-	editor = vim
+    editor = vim
 [color]
-	ui = auto
+    ui = auto
