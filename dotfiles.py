@@ -22,7 +22,7 @@ MAC_FILES = [
 ]
 
 LINUX_FILES = [
-    ".bash_aliases"
+    (".bash_profile", ".bash_aliases"),
 ]
 
 URL = "https://raw.githubusercontent.com/yeukhon/dotfiles/master/"
