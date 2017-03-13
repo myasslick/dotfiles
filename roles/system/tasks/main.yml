@@ -3,5 +3,5 @@
 - include: bash.yml
   tags: system-config
 
-- inclide: netrc.yml
+- include: netrc.yml
   tags: system-config
