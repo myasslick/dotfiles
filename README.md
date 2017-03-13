@@ -1,15 +1,31 @@
-dotfiles
-========
+# dotfiles
 
-Usage:
+Not your typical dotfiles repository. I am using Ansible to setup and
+configure my laptop.
+
+## Usage
+
+``-K`` is ``--ask-become-pass``, which prompts for ``sudo`` password.
+
+*Dry-run mode*:
+
+```shell
+ansible-playbook -i inventory/inventory main.yml -vvv --check --diff -K
 
 ```
-./dotfile.py
 
-Install dotfiles
+*Run mode*:
 
-optional arguments:
-  -h, --help  show this help message and exit
-  --mac       Install dotfiles on Mac.
-  --linux     Install dotfiles on Linux.
+```shell
+ansible-playbook -i inventory/inventory main.yml -vvv --check --diff -K
+
+```
+
+*Avaialble tags*:
+
+To get a list of available tags, do this:
+
+```shell
+ansible-playbook -i inventory/inventory main.yml --list-tags
+
 ```
