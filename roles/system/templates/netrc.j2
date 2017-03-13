@@ -1,5 +1,5 @@
 {% for item in netrc_config %}
-machine {{ item }}
+machine {{ item.name }}
 login {{ item.login }}
 password {{ item.password }}
 {% endfor %}
