@@ -17,7 +17,7 @@ ansible-playbook -i inventory/inventory main.yml -vvv --check --diff -K
 **Run mode**:
 
 ```shell
-ansible-playbook -i inventory/inventory main.yml -vvv -K
+ansible-playbook -i inventory/inventory main.yml -vvv --diff -K
 
 ```
 
