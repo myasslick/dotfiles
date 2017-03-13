@@ -7,21 +7,21 @@ configure my laptop.
 
 ``-K`` is ``--ask-become-pass``, which prompts for ``sudo`` password.
 
-*Dry-run mode*:
+**Dry-run mode**:
 
 ```shell
 ansible-playbook -i inventory/inventory main.yml -vvv --check --diff -K
 
 ```
 
-*Run mode*:
+**Run mode**:
 
 ```shell
 ansible-playbook -i inventory/inventory main.yml -vvv --check --diff -K
 
 ```
 
-*Avaialble tags*:
+**Avaialble tags**:
 
 To get a list of available tags, do this:
 
