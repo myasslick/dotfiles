@@ -1,3 +1,4 @@
+{{ ansible_managed | comment }}
 {% if ansible_distribution == "Ubuntu" %}
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'

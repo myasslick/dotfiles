@@ -1,3 +1,4 @@
+{{ ansible_managed | comment }}
 # Interval which SSH sends 'ping' to check connection health
 ServerAliveInterval {{ ssh_client_cofnig.server_alive_interval }}
 ServerAliveCountMax {{ ssh_client_config.server_alive_count_max }}

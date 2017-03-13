@@ -1,3 +1,5 @@
+{{ ansible_managed | comment}}
+
 {% for item in netrc_config %}
 machine {{ item.name }}
 login {{ item.login }}
