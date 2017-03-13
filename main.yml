@@ -6,6 +6,7 @@
   tasks:
     - name: ping
       ping:
+      tags: debug
 
   roles:
     - role: system

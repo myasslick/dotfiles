@@ -29,3 +29,12 @@ To get a list of available tags, do this:
 ansible-playbook -i inventory/inventory main.yml --list-tags
 
 ```
+
+**Check connectivity**:
+
+I know ``--check`` works. But for a quick ping, run this:
+
+```shell
+ansible-playbook -i inventory/inventory main.yml --tags=debug --check
+
+```
