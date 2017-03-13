@@ -1,0 +1,12 @@
+---
+
+- include: mac.yml
+  when: ansible_distribution == "MacOSX"
+  tags: gpg-install
+
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: gpg-install
+
+- include: config.yml
+  tags: gpg-config

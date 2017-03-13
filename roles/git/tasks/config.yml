@@ -1,0 +1,6 @@
+---
+
+- name: configure .gitconfig
+  template:
+    src: gitconfig.j2
+    dest: "{{ user_home_dir }}/.gitconfig"

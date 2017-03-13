@@ -1,0 +1,11 @@
+---
+
+# git configuration
+git_author_name: Yeuk Hon Wong
+git_author_email: yeukhon@acm.org
+git_author_signing_key: yeukhon.tech@gmail.com
+git_editor: vim
+
+# hg configuration
+hg_author_name: "{{ git_author_name }}"
+hg_author_email: "{{ hg_author_email }}"

@@ -1,0 +1,19 @@
+---
+
+git_author_name: default
+git_author_email: someone@localhost
+git_author_signing_key: someone@localhost
+git_editor: vim
+
+user_home_dir: "{{ ansible_env.HOME }}"
+
+# bash settings
+# please override these settings as needed
+install_gpg: true
+install_cf: false
+
+# netrc
+netrc_config:
+  example.com:
+    login: foobar
+    password: foopwd

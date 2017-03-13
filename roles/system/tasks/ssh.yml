@@ -1,0 +1,26 @@
+---
+
+- name: Ensure ~/.ssh folder exists
+  file: path={{ user_home_dir }} state=directory
+
+- name: Create ~/.ssh/encrypted folder
+  file: path={{ user_home_dir }}/.ssh/encrypted state=directory
+
+- name: Configure ~/.ssh/ssh_config file
+  template:
+    src: ssh_config.j2
+    dest: "{{ user_home_dir }}/.ssh/ssh_config"
+
+- name: Downloads encrypted SSH keys from S3
+  s3:
+    bucket: "{{ assets_s3_bucket }}"
+    object: "/ssh/home/{{ item }}"
+    dest: "{{ user_home_dir }}/.ssh/encrypted/{{ item }}"
+  with_items: "{{ ssh_keys }}"
+
+#- name: Decrypt each SSH key
+#  gpg:
+#    src: "{{ user_home_dir }}/.ssh/encrypted/{{ item }}"
+#    dest: "{{ user_home_dir }}/.ssh/{{ item }}"
+#    mode: 0400
+#  with_items: "{{ ssh_keys }}"

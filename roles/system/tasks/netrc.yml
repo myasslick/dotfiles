@@ -1,0 +1,6 @@
+---
+
+- name: Configure .netrc file
+  template:
+    src: netrc.j2
+    dest: "{{ user_home_dir }}/.netrc"

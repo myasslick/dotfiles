@@ -1,0 +1,24 @@
+---
+
+- hosts: home-laptop
+  gather_facts: yes
+
+  tasks:
+    - name: ping
+      ping:
+
+  roles:
+    - role: system
+      tags: system
+
+    - role: git
+      tags: git
+
+    - role: hg
+      tags: hg
+
+    - role: gpg
+      tags: gpg
+
+    - role: vim
+      tags: vim

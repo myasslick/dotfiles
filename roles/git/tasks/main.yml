@@ -1,0 +1,12 @@
+---
+
+- include: mac.yml
+  when: ansible_distribution == "MacOSX"
+  tags: git-install
+
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: git-install
+
+- include: config.yml
+  tags: git-config

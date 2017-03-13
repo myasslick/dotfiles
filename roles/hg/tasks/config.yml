@@ -1,0 +1,6 @@
+---
+
+- name: config .hgrc
+  template:
+    src: hgrc.j2
+    dest: "{{ user_home_dir }}/.hgrc"

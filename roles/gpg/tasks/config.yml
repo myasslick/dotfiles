@@ -1,0 +1,7 @@
+---
+
+- name: specify default cipher algorithm in gpg.conf
+  lineinfile:
+    path: "{{ user_home_dir }}/.gnupg/gpg.conf"
+    line: "{{ gpg_cipher }}"
+    state: present

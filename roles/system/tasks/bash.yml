@@ -1,0 +1,12 @@
+---
+
+- name: Configure .bash_profile
+  template:
+    src: bash_profile.j2
+    dest: "{{ user_home_dir }}/.bash_profile"
+
+- name: Configure .bash_aliases
+  template:
+    src: bash_aliases.j2
+    dest: "{{ user_home_dir }}/.bash_aliases"
+    mode: 0755

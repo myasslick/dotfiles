@@ -1,0 +1,33 @@
+---
+
+- name: Download gnupg
+  get_url:
+    url: "{{ gnupg_dmg.url }}"
+    dest: "/tmp/gnupg-{{ gnupg_dmg.version }}.dmg"
+    checksum: "{{ gnupg_dmg.checksum }}"
+
+- name: Check whether gnupg is installed
+  command: "gpg2 --version | grep {{ gnupg_version }}"
+
+- name: Mount gnupg image
+  command: |
+    hdiutil attach {{ gnupg_dmg_filename }} \
+    -nobrowse -mountpoint gnupg-{{ gnupg_version }} chdir=/tmp
+
+- name: Install gnupg from mounted image
+  command: |
+    installer \
+    -package /tmp/gnupg-{{ gnupg_version }}/Install.pkg \
+    -target "/"
+  become: yes
+
+- name: Unmount gnupg imagee
+  command: hdiutil detach /tmp/gnupg-{{ gnupg_version }}
+
+- name: Fix ~/.gnupg directory permission
+  file:
+    path: "{{ user_home_dir }}/.gnupg"
+    state: directory
+    mode: 0700
+    owner: "{{ ansible_user }}"
+    recurse: yes

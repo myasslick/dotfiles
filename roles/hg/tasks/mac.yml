@@ -1,0 +1,4 @@
+---
+
+- name: install hg
+  homebrew: name=mercurial state=latest

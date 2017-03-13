@@ -1,0 +1,8 @@
+---
+
+git_author_name: default
+git_author_email: someone@localhost
+git_author_signing_key: someone@localhost
+git_editor: vim
+
+user_home_dir: "{{ ansible_env.HOME }}"
