@@ -8,4 +8,4 @@ git_editor: vim
 
 # hg configuration
 hg_author_name: "{{ git_author_name }}"
-hg_author_email: "{{ hg_author_email }}"
+hg_author_email: "{{ git_author_email }}"
