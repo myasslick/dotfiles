@@ -1,6 +1,0 @@
----
-
-- name: config .vimrc
-  template:
-    src: vimrc.j2
-    dest: "{{ user_home_dir }}/.vimrc"

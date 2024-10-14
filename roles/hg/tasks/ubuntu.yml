@@ -1,4 +1,0 @@
----
-
-- name: install hg
-  apt: name=mercurial state=latest
