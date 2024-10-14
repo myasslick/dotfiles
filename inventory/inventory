@@ -1,2 +1,0 @@
-[home-laptop]
-localhost ansible_connection=local
